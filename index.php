@@ -17,12 +17,12 @@
 function inserirCarrinho ()
   {
           if(!file_exists("arquivo.txt")){
-                $arqCompra = fopen("arquivo.txt", "w");
+                $arqCompra = fopen("carrinho.txt", "w");
                 fwrite($nome, $codigo, $valor);
             }
 
              else {
-                $arqCompra = fopen("arquivo.txt", "a");
+                $arqCompra = fopen("carrinho.txt", "a");
               fwrite($nome, $codigo, $valor);
             fclose($arqCompra);
             }
