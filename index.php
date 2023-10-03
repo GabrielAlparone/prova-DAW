@@ -13,10 +13,20 @@
         $nome = $_POST['nome'];
         $codigo = $_POST['codigo'];
         $valor = $_POST['valor'];
-      
 
-            
+<?php function inserirCarrinho ()
+  {
+          if(!file_exists("arquivo.txt")){
+                $arqCompra = fopen("arquivo.txt", "w");
+                fwrite($nome, $codigo, $valor);
+            }
 
+             else {
+                $arqCompra = fopen("arquivo.txt", "a");
+              fwrite($nome, $codigo, $valor);
+            fclose($arqCompra);
+            }
+  }?>
 
   ?> 
          <form method="post" action="">
